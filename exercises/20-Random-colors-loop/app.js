@@ -1,4 +1,4 @@
-function getColor(colorNumber=0)
+function getColor(colorNumber)
 {
 	//make sure parameter is a number and not a string by converting the value to int:
 	colorNumber = parseInt(colorNumber);
@@ -16,12 +16,21 @@ function getColor(colorNumber=0)
 	}
 }
 
-function getAllStudentColors(){
+function getAllStudentColors(number){
 	
 	//your loop here
-	var exampleColor = getColor(1);
+	number = parseInt(number)
+	for(let i = 0 ; i < number ; i++){
+
+		var Randomnumber = Math.floor(Math.random()*4)
+
+		if(Randomnumber == 0){console.log()}
+		else console.log(getColor(Randomnumber))
+
+	}
+	//var exampleColor = getColor(1);
 }
 
 //call the function below with the number of students in the class and print on the console
-getAllStudentColors();
+getAllStudentColors(10);
 
